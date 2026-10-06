@@ -1,0 +1,296 @@
+﻿@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amazon - Product List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/KtraFE.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">amazon<span class="smile"></span></a>
+
+        <a href="#" class="deliver">
+            <i class="fas fa-map-marker-alt"></i>
+            <span><small>Deliver to</small><b>Vietnam</b></span>
+        </a>
+
+        <form class="search" id="searchForm">
+            <select><option>All</option></select>
+            <input type="text" id="searchInput" placeholder="Search Amazon" value="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+
+        <a href="#" class="lang"><i class="fas fa-flag-usa"></i> EN <i class="fas fa-caret-down"></i></a>
+        <a href="#" class="h-link"><small>Hello, sign in</small><b>Account &amp; Lists <i class="fas fa-caret-down"></i></b></a>
+        <a href="#" class="h-link"><small>Returns</small><b>&amp; Orders</b></a>
+        <a href="#" class="cart"><i class="fas fa-shopping-cart"></i><span id="cartCount">0</span> <b>Cart</b></a>
+    </header>
+
+    <nav class="subnav">
+        <a href="#"><i class="fas fa-bars"></i> All</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Prime Video</a>
+        <a href="#">Registry</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Sell</a>
+    </nav>
+
+    <div class="resultbar">1-5 of over 1,000 results for <span>"electric scrubber"</span></div>
+    <div class="layout">
+        <aside class="filters">
+            <h4>Textile Accessories</h4>
+            <ul>
+                <li><a href="#">Bags</a></li>
+                <li><a href="#">Bathing</a></li>
+                <li><a href="#">Household</a></li>
+                <li><a href="#">Pet</a></li>
+                <li><a href="#" class="more"><i class="fas fa-angle-down"></i> See more</a></li>
+            </ul>
+
+            <h4>Customer Reviews</h4>
+            <div class="rating big"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span>&amp; Up</span></div>
+
+            <h4>Best Sellers</h4>
+            <ul>
+                <li><a href="#">Cleaning</a></li>
+                <li><a href="#">Tools</a></li>
+            </ul>
+
+            <h4>Price</h4>
+            <input type="range" id="priceRange" min="0" max="100" value="100">
+            <div class="range-label">$0 - $<span id="priceValue">100</span></div>
+            <ul>
+                <li><a href="#">Up to $25</a></li>
+                <li><a href="#">$25 to $50</a></li>
+                <li><a href="#">$50 to $100</a></li>
+                <li><a href="#">$100 &amp; Above</a></li>
+            </ul>
+
+            <h4>Cleaning</h4>
+            <label class="chk"><input type="checkbox"> Cordless</label>
+            <label class="chk"><input type="checkbox"> Rechargeable</label>
+            <label class="chk"><input type="checkbox"> With extension pole</label>
+        </aside>
+        <main class="main">
+            <h3 class="results-title">Results</h3>
+            <p class="results-sub">Check each product page for other buying options. Price and other details may vary based on product size and colour.</p>
+
+            <section class="products" id="productList">
+                <div class="product" data-price="29.99">
+                    <div class="p-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCta275WzrlOXsKVn6jDUzO_M_cUjSwizsiDr_OPs_OA&s" alt=""></div>
+                    <a href="#" class="p-title">Handheld Spin Scrubber, Cordless Electric Cleaning Brush, 4 Replaceable Brush Heads</a>
+                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="count">1,234</span></div>
+                    <div class="price"><sup>$</sup><span>29</span><sup>99</sup></div>
+                    <div class="ship">FREE delivery Tue, Oct 14</div>
+                    <button class="add-cart">Add to cart</button>
+                </div>
+
+                <div class="product" data-price="49.99">
+                    <div class="p-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ9f3D8Rzr_-bE_LhPDAAc5DeLEYXNR8sLNJH8WgIm8Q&s=10" alt=""></div>
+                    <a href="#" class="p-title">LABIGO Electric Spin Scrubber with Extension Pole, Cordless Shower Cleaner</a>
+                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="count">2,567</span></div>
+                    <div class="price"><sup>$</sup><span>49</span><sup>99</sup></div>
+                    <div class="ship">FREE delivery Tue, Oct 14</div>
+                    <button class="add-cart">Add to cart</button>
+                </div>
+
+                <div class="product" data-price="59.99">
+                    <div class="p-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEhQefCfNMNjZx5eBbd8YOBeHYuKkfZqDhGKz1KPku6g&s=10" alt=""></div>
+                    <a href="#" class="p-title">Electric Spin Scrubber, Cordless Cleaning Brush, 8 Brush Heads, Long Handle</a>
+                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">3,890</span></div>
+                    <div class="price"><sup>$</sup><span>59</span><sup>99</sup></div>
+                    <div class="ship">FREE delivery Tue, Oct 14</div>
+                    <button class="add-cart">Add to cart</button>
+                </div>
+
+                <div class="product" data-price="34.95">
+                    <div class="p-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtLxJRN5PFBdXL53VF2xRV3pTJPlRgyGeEgmuc_NvVJw&s=10" alt=""></div>
+                    <a href="#" class="p-title">Cordless Power Scrubber with Replacement Heads for Bathroom and Kitchen</a>
+                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="count">845</span></div>
+                    <div class="price"><sup>$</sup><span>34</span><sup>95</sup></div>
+                    <div class="ship">FREE delivery Tue, Oct 14</div>
+                    <button class="add-cart">Add to cart</button>
+                </div>
+
+                <div class="product" data-price="69.99">
+                    <div class="p-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUnktenCaFyMoTjJwliC9i3mdz-ohWwcyYUdgXxraCGA&s=10" alt=""></div>
+                    <a href="#" class="p-title">LABIGO Cordless Spin Scrubber with Adjustable Handle, Rechargeable</a>
+                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="count">5,120</span></div>
+                    <div class="price"><sup>$</sup><span>69</span><sup>99</sup></div>
+                    <div class="ship">FREE delivery Tue, Oct 14</div>
+                    <button class="add-cart">Add to cart</button>
+                </div>
+            </section>
+            <section class="carousel-box">
+                <h3>Inspired by your browsing history <a href="#" class="pagelink">Page 1 of 3</a></h3>
+                <div class="carousel">
+                    <button class="nav prev" data-target="c1"><i class="fas fa-chevron-left"></i></button>
+                    <div class="track" id="c1">
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMFEu-4BiZQaogOkvO-20Sa4gnthY3w60LN81UkHDShA&s=10" alt="">
+                            <a href="#">Tommy Hilfiger Womens Satchel Handbag Top Handle Tote Shoulder Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">37</span></div>
+                            <div class="price small"><sup>$</sup><span>23</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROScp_SQbcMUXsqb_3mQG-2q-BEgiLMJ6V_5lEfdL1mQ&s=10" alt="">
+                            <a href="#">Tommy Hilfiger Leather Shoulder Bag with Removeable Crossbody Strap</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">74</span></div>
+                            <div class="price small"><sup>$</sup><span>26</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4yk-sjqiMxTDlzCnIprYc391ESxBJtYbc_5M6KaLmJw&s=10" alt="">
+                            <a href="#">Hermes's Birkin and Kelly</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">111</span></div>
+                            <div class="price small"><sup>$</sup><span>29</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv95LcJ_9y0fJKYUST5p-KdTMBbpzr8ozVzYlv5kYbsQ&s=10" alt="">
+                            <a href="#">Polene's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">148</span></div>
+                            <div class="price small"><sup>$</sup><span>32</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvvTRsONp2q1BRLr0BRnwbkz2J35z95HsUTBzb4Jnr8w&s=10" alt="">
+                            <a href="#">Demillier's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">185</span></div>
+                            <div class="price small"><sup>$</sup><span>35</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFJarO5-7pgGuzDhsZDevO_1cuFefQjSmK1BtmsC333w&s=10" alt="">
+                            <a href="#">Songmont's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">222</span></div>
+                            <div class="price small"><sup>$</sup><span>38</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gb2-qK52IQ8KzSpCgz5HFBc9S95sAkU7Phh7MMb3wg&s=10" alt="">
+                            <a href="#">Louis vuitton's Bagpack</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">259</span></div>
+                            <div class="price small"><sup>$</sup><span>41</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgdYDV3Sv4J2MJdPsHq036uqh82CzqURfgyi0HZ6Jpgw&s=10" alt="">
+                            <a href="#">Strathberry's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">296</span></div>
+                            <div class="price small"><sup>$</sup><span>44</span><sup>99</sup></div>
+                        </div>
+                    </div>
+                    <button class="nav next" data-target="c1"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+            <section class="carousel-box">
+                <h3>Recommended based on your browsing history <a href="#" class="pagelink">Page 1 of 3</a></h3>
+                <div class="carousel">
+                    <button class="nav prev" data-target="c2"><i class="fas fa-chevron-left"></i></button>
+                    <div class="track" id="c2">
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKo8XyZFDNnOvW1-be7nGr6I81CJYXlJ64BTU595wZKA&s=10" alt="">
+                            <a href="#">DRAGON DIFFUSION's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">37</span></div>
+                            <div class="price small"><sup>$</sup><span>23</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpYBIxRcyVi6emhihP_zXwIs_vO6K7SHduFaWuBHgqDw&s=10" alt="">
+                            <a href="#">Little Liffner's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">74</span></div>
+                            <div class="price small"><sup>$</sup><span>26</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZq_kNb02qalZWQo3IqicOFMZWLUQ7m1-QKt-SY98IFA&s=10" alt="">
+                            <a href="#">Hereu's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">111</span></div>
+                            <div class="price small"><sup>$</sup><span>29</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw1z8JCl3jLngsujYf7O14G6cQpJfJqo5rDXlSoJnoiQ&s=10" alt="">
+                            <a href="#">Charles & Keith's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">148</span></div>
+                            <div class="price small"><sup>$</sup><span>32</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-w2Qcgx3MI6mzhd4ZL--KZZsqvfg0YB_d2fJLG4CJ2w&s=10" alt="">
+                            <a href="#">Lemaire's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">185</span></div>
+                            <div class="price small"><sup>$</sup><span>35</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo88xogTgxP5v2nW_RvHPwN4CxZCGPa5Oik9nP0ayFJw&s" alt="">
+                            <a href="#">Oneroot's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">222</span></div>
+                            <div class="price small"><sup>$</sup><span>38</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo2zK1TM4_ivWLzrT8r3yYEkAffovB9ryw3qLaymeFVg&s=10" alt="">
+                            <a href="#">Vasic's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">259</span></div>
+                            <div class="price small"><sup>$</sup><span>41</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9cPUm-YSwaUmsTdx1JV9kJOcAs4LEklnS7QMuj9bomw&s=10" alt="">
+                            <a href="#">Pixie mood's Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">296</span></div>
+                            <div class="price small"><sup>$</sup><span>44</span><sup>99</sup></div>
+                        </div>
+                        <div class="item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWtNiSSRBkXzx1jKVX8utm-gveAaGhHCdIR9d4g2hQDQ&s=10" alt="">
+                            <a href="#"> Marni Trunk Bag</a>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="count">333</span></div>
+                            <div class="price small"><sup>$</sup><span>47</span><sup>99</sup></div>
+                        </div>
+                    </div>
+                    <button class="nav next" data-target="c2"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </main>
+        <aside class="ads">
+            <div class="ad">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRsXnYmHqGccbZDyBM8wdXvcchWHVjoi5y9BTLN4GTTQ&s=10" alt="">
+                <div class="ad-price">$22.99</div>
+                <button class="add-cart small">Add to cart</button>
+            </div>
+            <div class="ad">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW42luJsP9K__mgm1oExlnLMOALuMif7fpYCH-o-uIDg&s=10" alt="">
+                <div class="ad-price">$29.99</div>
+                <button class="add-cart small">Add to cart</button>
+            </div>
+            <div class="ad">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR9_ANjtirEGzgAf80LF6yKzqRjJ4gWSudFqoHJ_goSvnh3BO6WFqyE4PiqxwztwkLTK4UcBNHCcTQTB7qlj61RiG37Ooy8sqPrJFI1c5Mg4WD0epVnr78n8H1a2iZlIgUAnZPoTA&usqp=CAc" alt="">
+                <div class="ad-price">$36.99</div>
+                <button class="add-cart small">Add to cart</button>
+            </div>
+        </aside>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-grid">
+            <a href="#"><b>Amazon Music</b><span>Stream millions of songs</span></a>
+            <a href="#"><b>Amazon Ads</b><span>Reach customers wherever they spend their time</span></a>
+            <a href="#"><b>6pm</b><span>Score deals on fashion brands</span></a>
+            <a href="#"><b>AbeBooks</b><span>Books, art &amp; collectibles</span></a>
+            <a href="#"><b>ACX</b><span>Audiobook Publishing Made Easy</span></a>
+            <a href="#"><b>Sell on Amazon</b><span>Start a Selling Account</span></a>
+            <a href="#"><b>Veeqo</b><span>Shipping Software Inventory Management</span></a>
+            <a href="#"><b>Amazon Business</b><span>Everything For Your Business</span></a>
+            <a href="#"><b>AmazonGlobal</b><span>Ship Orders Internationally</span></a>
+            <a href="#"><b>Amazon Web Services</b><span>Scalable Cloud Computing Services</span></a>
+            <a href="#"><b>Audible</b><span>Listen to Books &amp; Original Audio Performances</span></a>
+            <a href="#"><b>Box Office Mojo</b><span>Find Movie Box Office Data</span></a>
+            <a href="#"><b>Goodreads</b><span>Book reviews &amp; recommendations</span></a>
+            <a href="#"><b>IMDb</b><span>Movies, TV &amp; Celebrities</span></a>
+            <a href="#"><b>IMDbPro</b><span>Get Info Entertainment Professionals Need</span></a>
+            <a href="#"><b>Kindle Direct Publishing</b><span>Indie Digital &amp; Print Publishing Made Easy</span></a>
+            <a href="#"><b>Prime Video Direct</b><span>Video Distribution Made Easy</span></a>
+            <a href="#"><b>Shopbop</b><span>Designer Fashion Brands</span></a>
+            <a href="#"><b>Woot!</b><span>Deals and Shenanigans</span></a>
+            <a href="#"><b>Zappos</b><span>Shoes &amp; Clothing</span></a>
+            <a href="#"><b>Ring</b><span>Smart Home Security Systems</span></a>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/KtraFE.js"></script>
+</body>
+</html>
