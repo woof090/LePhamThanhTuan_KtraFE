@@ -1,0 +1,496 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #0f1111;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #131921;
+    color: #fff;
+    padding: 8px 14px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.smile {
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    bottom: 2px;
+    height: 8px;
+    border-bottom: 3px solid #ff9900;
+    border-radius: 0 0 50% 50%;
+}
+
+.deliver {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+
+    .deliver small {
+        display: block;
+        color: #ccc;
+        font-size: 11px;
+    }
+
+.search {
+    flex: 1;
+    display: flex;
+    height: 36px;
+}
+
+    .search select {
+        width: 46px;
+        border: none;
+        background: #e6e6e6;
+        border-radius: 4px 0 0 4px;
+        font-size: 12px;
+    }
+
+    .search input {
+        flex: 1;
+        border: none;
+        padding: 0 10px;
+        outline: none;
+    }
+
+    .search button {
+        width: 44px;
+        border: none;
+        background: #febd69;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+.lang, .h-link, .cart {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+    .h-link small {
+        display: block;
+        color: #ccc;
+        font-size: 11px;
+    }
+
+    .h-link b {
+        font-size: 13px;
+    }
+
+.cart {
+    font-size: 14px;
+    position: relative;
+    padding-right: 4px;
+}
+
+    .cart i {
+        font-size: 24px;
+    }
+
+#cartCount {
+    position: absolute;
+    top: -14px;
+    left: 13px;
+    color: #f08804;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.subnav {
+    display: flex;
+    gap: 18px;
+    background: #232f3e;
+    color: #fff;
+    padding: 7px 14px;
+    font-size: 13px;
+}
+
+.resultbar {
+    padding: 8px 14px;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+    .resultbar span {
+        color: #c45500;
+    }
+
+/* ---------- LAYOUT 3 CỘT ---------- */
+.layout {
+    display: flex;
+    gap: 16px;
+    padding: 12px 14px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.filters {
+    width: 190px;
+    flex-shrink: 0;
+    font-size: 13px;
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+}
+
+.ads {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+/* ---------- LỌC ---------- */
+.filters h4 {
+    font-size: 13px;
+    margin: 14px 0 6px;
+}
+
+.filters ul {
+    list-style: none;
+}
+
+.filters li {
+    margin: 4px 0;
+}
+
+.filters a:hover {
+    color: #c7511f;
+}
+
+.filters .more {
+    color: #007185;
+}
+
+.filters input[type=range] {
+    width: 100%;
+    accent-color: #007185;
+}
+
+.range-label {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.chk {
+    display: block;
+    margin: 4px 0;
+}
+
+/* ---------- SAO ---------- */
+.rating {
+    color: #f5a623;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+    .rating .count {
+        color: #007185;
+        font-size: 12px;
+        margin-left: 4px;
+    }
+
+    .rating.big span {
+        color: #0f1111;
+        font-size: 12px;
+        margin-left: 4px;
+    }
+
+/* ---------- SẢN PHẨM ---------- */
+.results-title {
+    font-size: 18px;
+}
+
+.results-sub {
+    font-size: 12px;
+    color: #565959;
+    margin: 4px 0 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.product {
+    border: 1px solid #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+    .product.hide {
+        display: none;
+    }
+
+.p-img {
+    height: auto !important;
+    background: none !important;
+    display: block;
+}
+
+    .p-img img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: fill !important;
+        display: block;
+    }
+/* rộng bằng ô, giữ nguyên tỉ lệ, không crop */
+.p-title {
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+    .p-title:hover {
+        color: #c7511f;
+    }
+
+.price {
+    font-size: 22px;
+}
+
+    .price sup {
+        font-size: 12px;
+        vertical-align: super;
+    }
+
+    .price.small {
+        font-size: 16px;
+    }
+
+.ship {
+    font-size: 12px;
+    color: #565959;
+}
+
+.add-cart {
+    margin-top: auto;
+    align-self: flex-start;
+    background: #ffd814;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+    .add-cart:hover {
+        background: #f7ca00;
+    }
+
+    .add-cart.small {
+        align-self: center;
+        padding: 4px 10px;
+        background: #fff;
+        border: 1px solid #f0c14b;
+    }
+
+/* ---------- CAROUSEL ---------- */
+.carousel-box {
+    margin-top: 22px;
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+}
+
+    .carousel-box h3 {
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+.pagelink {
+    font-size: 12px;
+    font-weight: normal;
+    color: #565959;
+}
+
+.carousel {
+    position: relative;
+    margin-top: 10px;
+}
+
+.track {
+    display: flex;
+    gap: 14px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 0 36px;
+}
+
+.item {
+    flex: 0 0 150px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .item img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        background: #fff;
+    }
+
+    .item a {
+        color: #007185;
+        line-height: 1.3;
+    }
+
+        .item a:hover {
+            color: #c7511f;
+        }
+
+.nav {
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    width: 30px;
+    height: 60px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .nav.prev {
+        left: 0;
+    }
+
+    .nav.next {
+        right: 0;
+    }
+
+/* ---------- QUẢNG CÁO PHẢI ---------- */
+.ads {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ad {
+    border: 1px solid #eee;
+    padding: 8px;
+    text-align: center;
+}
+
+    .ad img {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+        background: #fff;
+    }
+
+.ad-price {
+    margin: 6px 0;
+    font-size: 12px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: #131a22;
+    color: #ddd;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.footer-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 24px 12px;
+}
+
+    .footer-grid b {
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    .footer-grid span {
+        display: block;
+        font-size: 11px;
+        color: #999;
+        margin-top: 2px;
+    }
+
+    .footer-grid a:hover b {
+        text-decoration: underline;
+    }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ads {
+        display: none;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .deliver, .lang {
+        display: none;
+    }
+}
+
+/* Ẩn menu Home/About của layout ASP.NET (nếu vẫn còn) */
+.navbar, .navbar-collapse, .navbar-nav, .navbar-toggler {
+    display: none !important;
+}
